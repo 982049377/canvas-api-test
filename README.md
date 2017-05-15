@@ -17,3 +17,8 @@
  })
  ///这个e怎么得到的具体数值？？？！！
 
+
+
+this怎么处理的()=>{}
+路径问题
+ResourceManager 和 ImageResource之间的关系0

@@ -21,6 +21,7 @@ class Role extends engine.DisplayObjectContainer{
             tool.anch(this._role);
             this.addChild(this._role);
             var idle:Idle=new Idle (this,this.idlelist);
+            // console.log(this.idlelist.length)
             this._State=idle;
             this._State.onEnter();
       }

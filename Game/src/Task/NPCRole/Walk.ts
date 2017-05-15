@@ -3,18 +3,19 @@ class Walk implements State {
       private Walkcount = -1;
       private person: Role;
       private i: number = 0;
+      private temp: () => void;
       public constructor(pperson: Role, walk: string[]) {
             this.person = pperson;
             this.Walklist = walk;
       }
       onEnter() {
-            engine.startTick(this.PlayWalk);
-            //           console.log("EnterWalk");
+            this.temp = this.PlayWalk;
+            engine.startTick(this.temp);
       }
 
       onExit() {
-
-            engine.stopTick(this.PlayWalk);
+            this.temp = this.PlayWalk;
+            engine.stopTick(this.temp);
       }
       private PlayWalk(): boolean {
             this.Walkcount++;
